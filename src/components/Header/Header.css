@@ -1,0 +1,36 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1000;
+    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    z-index: 1000;
+}
+
+nav img {
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 60pt;
+    transition: .3s ease;
+}
+
+.links-control a {
+    font-size: 18pt;
+    margin-right: 30pt;
+    font-weight: bold;
+    line-height: 0;
+}
+
+
+

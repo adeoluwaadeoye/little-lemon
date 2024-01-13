@@ -1,0 +1,113 @@
+.footer {
+    background-color: var(--primary-color-yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    color: #0e2b21;
+    font-size: 18px;
+}
+
+
+.footer-top {
+    display: flex;
+    justify-content: space-evenly;
+    width: 1500px;
+    border-bottom: 1px solid rgb(66, 66, 66);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+    color: #163115;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.navigation h4 {
+    text-align: left;
+}
+
+
+.footer .contact {
+    margin-top: 13px;
+}
+
+/* Add this CSS to your existing styles */
+
+.social-media h4 {
+    margin-bottom: 15px;
+}
+
+.social-media a {
+    margin-right: 10px;
+    /* Adjust spacing between icons */
+    padding: 15px;
+    /* Adjust padding for the icons */
+    border-radius: 10px;
+    /* Make the icons circular */
+    background-color: #3b5998;
+    /* Facebook blue background color */
+    color: #fff;
+    font-size: 24px;
+}
+
+.social-media a:hover {
+    background-color: #4a63a1;
+    /* Adjust the hover color for Facebook */
+}
+
+.social-media a:nth-child(2) {
+    background-color: #1da1f2;
+    /* Twitter blue background color */
+}
+
+.social-media a:nth-child(2):hover {
+    background-color: #2795e9;
+    /* Adjust the hover color for Twitter */
+}
+
+.social-media a:nth-child(3) {
+    background-color: #c13584;
+    /* Instagram pink background color */
+}
+
+.social-media a:nth-child(3):hover {
+    background-color: #e4405f;
+    /* Adjust the hover color for Instagram */
+}
+
+.social-media a:nth-child(4) {
+    background-color: #0077b5;
+    /* LinkedIn blue background color */
+}
+
+.social-media a:nth-child(4):hover {
+    background-color: #005f91;
+    /* Adjust the hover color for LinkedIn */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    min-width: 800px;
+    margin: 10px 0;
+}
+
+.footer-bottom a {
+    color: #000;
+}
+
+.footer-last {
+    text-align: center;
+    margin-top: 12px;
+}

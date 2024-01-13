@@ -1,0 +1,131 @@
+/* main.css */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&family=Markazi+Text:wght@400;500;600;700&display=swap');
+
+/* :root variables */
+:root {
+    --primary-color-green: #495e57;
+    --primary-color-yellow: #f4ce14;
+    --secondary-color-one: #ee9972;
+    --secondary-color-two: #fbdabb;
+    --secondary-color-third: #edefee;
+    --secondary-color-fourth: #333333;
+    --black-color: #000000;
+    --main-font: 'Karla', sans-serif;
+    --heading-font: 'Markazi Text', serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.5;
+    --spacing-unit: 8px;
+}
+
+/* Global Typography */
+body {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--secondary-color-fourth);
+    padding-top: 80px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+
+.display-title {
+    font-family: var(--heading-font);
+    font-size: 56pt;
+    font-weight: medium;
+    font-family: var(--heading-font);
+}
+
+.subtitle {
+    font-family: var(--heading-font);
+    font-size: 40pt;
+    font-family: var(--heading-font);
+}
+
+.lead-text {
+    font-family: var(--main-font);
+    font-size: 18pt;
+    font-family: var(--main-font);
+}
+
+.section-title {
+    font-size: 20pt;
+    font-weight: bolder;
+    font-size: 16pt;
+    font-family: var(--main-font);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 18pt;
+    font-family: var(--main-font);
+}
+
+.paragraph-text {
+    font-size: 16pt;
+    line-height: 1.5;
+    font-family: var(--main-font);
+}
+
+/* Global Layout Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Utility Classes */
+.hide {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Theme Styling */
+body {
+    background-color: #ffffff;
+}
+
+/* Link Styles */
+a {
+    color: var(--black-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--secondary-color-one);
+}
+
+/* Button Styles */
+button {
+    padding: 15px 30px;
+    background-color: var(--primary-color-yellow);
+    color: var(--black-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .3s ease-in-out;
+    font-weight: bold;
+}
+
+
+button:hover {
+    opacity: .5;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Other styles using the defined variables */
+

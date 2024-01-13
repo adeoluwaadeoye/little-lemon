@@ -1,0 +1,171 @@
+/* Testimonials.css */
+.testimonial {
+    margin-bottom: 40px;
+}
+
+.testimonial.container {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+.left {
+    text-align: left;
+}
+
+.test_inner {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.testimonial-front {
+    align-items: center;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.testimonial-cover {
+    max-width: 500px;
+}
+
+.testimonial-slider {
+    width: 70%;
+    margin: 20px;
+    max-width: 700px;
+}
+
+.testimonial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: none;
+    margin-right: 20px;
+    background-color: var(--secondary-color-third);
+    min-height: 300px;
+}
+
+.testimonial-comment {
+    margin-bottom: 10px;
+    background-color: var(--secondary-color-third);
+}
+
+.testimonial-name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+}
+
+.slick-track {
+    will-change: transform;
+}
+
+.slick-list {
+    overflow: hidden;
+    will-change: transform;
+}
+
+.slick-slide {
+    padding: 20px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+    margin-bottom: 20px;
+}
+
+.slick-slide img {
+    height: 40vh;
+    max-height: 35vh;
+    width: 280px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+[type="button"] {
+    position: fixed;
+    top: 102%;
+    left: 20px;
+    z-index: 10;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border: 0;
+    text-indent: -9999px;
+    background-color: var(--secondary-color-one);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.9;
+    transform: translateY(-50%);
+    transition: all 0.25s ease;
+}
+
+[type="button"]:hover {
+    background-color: yellow;
+}
+
+.slick-next {
+    left: 82px;
+    position: absolute;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjx0aXRsZT5jaGV2cm9uLXJpZ2h0PC90aXRsZT48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTUuNzA2IDExLjI5NGwtNi02Yy0wLjM4Ny0wLjM4Ny0xLjAyNS0wLjM4Ny0xLjQxMyAwcy0wLjM4NyAxLjAyNSAwIDEuNDEzbDUuMjk0IDUuMjk0LTUuMjk0IDUuMjk0Yy0wLjM4NyAwLjM4Ny0wLjM4NyAxLjAyNSAwIDEuNDEzIDAuMTk0IDAuMTk0IDAuNDUgMC4yOTQgMC43MDYgMC4yOTRzMC41MTMtMC4xIDAuNzA2LTAuMjk0bDYtNmMwLjM5NC0wLjM4NyAwLjM5NC0xLjAyNSAwLTEuNDEzeiI+PC9wYXRoPjwvc3ZnPg==);
+}
+
+.slick-prev {
+    left: 10px;
+    position: absolute;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjx0aXRsZT5jaGV2cm9uLWxlZnQ8L3RpdGxlPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMC40MTMgMTJsNS4yOTQtNS4yOTRjMC4zODctMC4zODcgMC4zODctMS4wMjUgMC0xLjQxM3MtMS4wMjUtMC4zODctMS40MTMgMGwtNiA2Yy0wLjM4NyAwLjM4Ny0wLjM4NyAxLjAyNSAwIDEuNDEzbDYgNmMwLjE5NCAwLjE5NCAwLjQ1IDAuMjk0IDAuNzA2IDAuMjk0czAuNTEzLTAuMSAwLjcwNi0wLjI5NGMwLjM4Ny0wLjM4NyAwLjM4Ny0xLjAyNSAwLTEuNDEzbC01LjI5NC01LjI5NHoiPjwvcGF0aD48L3N2Zz4=);
+}
+
+
+.slick-dots {
+    position: absolute;
+    bottom: 3px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+    background-color: grey;
+    font-size: 40px;
+    border-radius: 50%;
+    margin-top: c 45px;
+}
+
+.slick-dots button {
+    font-size: 12px;
+    line-height: 1;
+    color: #000;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0;
+    opacity: 0;
+}
+
+.slick-dots button:hover,
+.slick-dots button:focus {
+    opacity: 1;
+}
+
+
+.testimonial-front div svg {
+    background-color: var(--primary-color-green);
+    padding: 40px;
+    font-size: 40px;
+    color: var(--primary-color-yellow);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
