@@ -1,5 +1,7 @@
+
+// MyFormOverlay.js
 import React, { useState } from 'react';
-import './Reservation.css'
+import './Reservation.css';
 
 const MyFormOverlay = ({ onClose }) => {
     const [formData, setFormData] = useState({
@@ -10,6 +12,7 @@ const MyFormOverlay = ({ onClose }) => {
         date: '',
         time: '',
         specialRequests: '',
+        seatingPreference: 'indoor',
     });
 
     const [isReservationSuccess, setReservationSuccess] = useState(false);
@@ -24,7 +27,7 @@ const MyFormOverlay = ({ onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simulating a reservation booking, you can replace this with your actual logic.
+        // Simulating a reservation booking
         setTimeout(() => {
             setReservationSuccess(true);
         }, 1000); // Adding a delay to simulate an asynchronous operation
@@ -44,44 +47,49 @@ const MyFormOverlay = ({ onClose }) => {
                 {isReservationSuccess ? (
                     <div className="success-message">
                         <p>Your reservation has been successfully booked!</p>
+                        <p className='mark'>✔</p>
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit}>
                         {/* Your form fields */}
-                        <label>
+                        <label htmlFor="name">
                             Name:
                             <input
                                 type="text"
+                                id="name"
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
                             />
                         </label>
-                        <label>
+                        <label htmlFor="email">
                             Email:
                             <input
                                 type="email"
+                                id="email"
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
                             />
                         </label>
-                        <label>
+                        <label htmlFor="phone">
                             Phone:
                             <input
                                 type="tel"
+                                id="phone"
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
                                 required
                             />
                         </label>
-                        <label>
+                        <label htmlFor="numberOfPeople">
                             Number of People:
                             <input
                                 type="number"
+                                id="numberOfPeople"
                                 name="numberOfPeople"
                                 value={formData.numberOfPeople}
                                 onChange={handleChange}
@@ -89,34 +97,62 @@ const MyFormOverlay = ({ onClose }) => {
                                 min={1}
                             />
                         </label>
-                        <label>
+                        <label htmlFor="date">
                             Date:
                             <input
                                 type="date"
+                                id="date"
                                 name="date"
                                 value={formData.date}
                                 onChange={handleChange}
                                 required
                             />
                         </label>
-                        <label>
+                        <label htmlFor="time">
                             Time:
                             <input
                                 type="time"
+                                id="time"
                                 name="time"
                                 value={formData.time}
                                 onChange={handleChange}
                                 required
                             />
                         </label>
-                        <label>
+                        <label htmlFor="specialRequests">
                             Special Requests:
                             <textarea
+                                id="specialRequests"
                                 name="specialRequests"
                                 value={formData.specialRequests}
                                 onChange={handleChange}
                             />
                         </label>
+                        <fieldset style={{ display: 'flex' }}>
+                            <legend>Seating Preference</legend>
+                            <label htmlFor="indoor">
+                                Indoor
+                                <input
+                                    type="radio"
+                                    id="indoor"
+                                    name="seatingPreference"
+                                    value="indoor"
+                                    checked={formData.seatingPreference === 'indoor'}
+                                    onChange={handleChange}
+                                />
+                            </label>
+                            <label htmlFor="outdoor">
+                                Outdoor
+                                <input
+                                    type="radio"
+                                    id="outdoor"
+                                    name="seatingPreference"
+                                    value="outdoor"
+                                    checked={formData.seatingPreference === 'outdoor'}
+                                    onChange={handleChange}
+                                />
+                            </label>
+                        </fieldset>
                         <button type="submit">Submit Reservation</button>
                     </form>
                 )}

@@ -17,16 +17,17 @@
     --spacing-unit: 8px;
 }
 
+
 /* Global Typography */
 body {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
     color: var(--secondary-color-fourth);
-    padding-top: 80px;
+    padding: 100px;
 }
 
 section {
-    margin-bottom: 25px;
+    margin-top: 50px;
 }
 
 
@@ -70,7 +71,7 @@ section {
 
 /* Global Layout Styles */
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -116,16 +117,12 @@ button {
 
 
 button:hover {
-    opacity: .5;
+    opacity: .8;
 }
 
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 14px;
+@media only screen and (max-width: 992px) {
+    .display-title {
+        font-size: 45pt;
     }
 }
-
-/* Other styles using the defined variables */
 

@@ -169,3 +169,24 @@
     margin-bottom: 15px;
     border-radius: 50%;
 }
+
+
+/* Media query for screens 992px and below */
+@media screen and (max-width: 992px) {
+
+    .test_inner {
+        flex-direction: column;
+    }
+    .testimonial-slider {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .testimonial-item {
+        margin-right: 0;
+    }
+
+    .slick-dots li {
+        font-size: 25px;
+    }
+}

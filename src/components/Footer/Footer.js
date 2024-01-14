@@ -9,13 +9,13 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-top">
                 {/* Restaurant Logo */}
-                <nav>
-                    {/* ... (unchanged code) */}
+                <nav className='footer-logo'>
                     <img
                         height={50}
                         width={250}
                         src={require('../../assets/images/logo.png')}
                         alt='logo'
+                        className='brand-logo'
                     />
                 </nav>
 

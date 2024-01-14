@@ -254,7 +254,6 @@
 
 /* ----------- end of cart -------------- */
 
-/* Media query for small phones (320px) */
 @media (max-width: 415px) {
     .section-title h2 {
         font-size: 1.8rem;
@@ -330,3 +329,14 @@
     }
 }
 
+@media (max-width: 768px) {
+
+    .products-center {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Adjust the minmax values as needed */
+    }
+
+    .cart {
+        top: 20%;
+    }
+}

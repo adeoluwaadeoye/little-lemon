@@ -1,33 +1,35 @@
+/* Existing styles for larger screens */
+
 .footer {
     background-color: var(--primary-color-yellow);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
     text-align: left;
     color: #0e2b21;
     font-size: 18px;
+    padding: 10px;
 }
-
 
 .footer-top {
     display: flex;
     justify-content: space-evenly;
-    width: 1500px;
     border-bottom: 1px solid rgb(66, 66, 66);
+    padding-right: 0px;
+    z-index: 999;
 }
 
-.navigation {
+.footer .navigation {
     display: flex;
     flex-direction: column;
 }
 
-.navigation ul {
+.footer .navigation ul {
     display: flex;
     flex-direction: column;
 }
 
-.navigation a {
+.footer .navigation a {
     color: #163115;
     font-size: 18px;
     font-weight: normal;
@@ -37,12 +39,9 @@
     text-align: left;
 }
 
-
 .footer .contact {
     margin-top: 13px;
 }
-
-/* Add this CSS to your existing styles */
 
 .social-media h4 {
     margin-bottom: 15px;
@@ -50,50 +49,39 @@
 
 .social-media a {
     margin-right: 10px;
-    /* Adjust spacing between icons */
     padding: 15px;
-    /* Adjust padding for the icons */
     border-radius: 10px;
-    /* Make the icons circular */
     background-color: #3b5998;
-    /* Facebook blue background color */
     color: #fff;
     font-size: 24px;
 }
 
 .social-media a:hover {
     background-color: #4a63a1;
-    /* Adjust the hover color for Facebook */
 }
 
 .social-media a:nth-child(2) {
     background-color: #1da1f2;
-    /* Twitter blue background color */
 }
 
 .social-media a:nth-child(2):hover {
     background-color: #2795e9;
-    /* Adjust the hover color for Twitter */
 }
 
 .social-media a:nth-child(3) {
     background-color: #c13584;
-    /* Instagram pink background color */
 }
 
 .social-media a:nth-child(3):hover {
     background-color: #e4405f;
-    /* Adjust the hover color for Instagram */
 }
 
 .social-media a:nth-child(4) {
     background-color: #0077b5;
-    /* LinkedIn blue background color */
 }
 
 .social-media a:nth-child(4):hover {
     background-color: #005f91;
-    /* Adjust the hover color for LinkedIn */
 }
 
 .footer-bottom {
@@ -110,4 +98,35 @@
 .footer-last {
     text-align: center;
     margin-top: 12px;
+}
+
+/* Adjustments for smaller screens */
+
+@media screen and (max-width: 992px) {
+    footer {
+        margin-top: 9rem;
+        margin-bottom: 0;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: none;
+    }
+
+    .navigation,
+    .social-media {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: row;
+        /* Keep content on the same line */
+        justify-content: space-between;
+        text-align: left;
+    }
 }

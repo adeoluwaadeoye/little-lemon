@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Box, HStack, Link } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { FaBars, FaTimes } from 'react-icons/fa';
 import Reservation from "./Reservation";
 import '../../assets/styles/main.css';
 import './Header.css';
@@ -10,8 +11,8 @@ import './Reservation.css';
 
 const Header = ({ cartCount, toggleCart }) => {
     const headerRef = useRef(null);
-    // const prevScrollY = useRef(0);
     const [isReservationActive, setIsReservationActive] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,7 +32,6 @@ const Header = ({ cartCount, toggleCart }) => {
         const element = document.getElementById(id);
 
         if (anchor.toLowerCase() === "reservation") {
-            // For the Reservation link, toggle the reservation overlay
             handleReservationClick();
             return;
         }
@@ -45,10 +45,19 @@ const Header = ({ cartCount, toggleCart }) => {
 
         const path = `/${anchor.toLowerCase()}`;
         window.history.pushState({ path }, "", path);
+
+        // Close navigation on smaller screens
+        if (window.innerWidth <= 900) {
+            setIsNavOpen(false);
+        }
     };
 
     const handleReservationClick = () => {
         setIsReservationActive(!isReservationActive);
+    };
+
+    const toggleNav = () => {
+        setIsNavOpen(!isNavOpen);
     };
 
     return (
@@ -64,26 +73,26 @@ const Header = ({ cartCount, toggleCart }) => {
             transitionTimingFunction="ease-in-out"
             backgroundColor="#ffffff"
             zIndex={1000}
+            boxShadow={"4px 4px 8px #fff"}
         >
-            <Box color="white" maxWidth="1200px" margin="0 auto">
+            <Box color="white" maxWidth="1200px" margin="0 auto" className="header-control">
                 <HStack
                     px={16}
                     py={4}
                     alignItems="center"
+                    justifyContent={"space-between"}
                 >
                     <nav>
-                        {/* ... (unchanged code) */}
                         <img
                             height={50}
-                            width={250}
+                            width={230}
                             src={require('../../assets/images/logo.png')}
                             alt='logo'
                         />
-
                     </nav>
                     <nav>
                         <HStack spacing={8} textDecoration={"none"} textTransform={"capitalize"}>
-                            <div className={`links-control section-title ${isReservationActive ? 'disabled' : ''}`}>
+                            <div className={`links-control section-title  ${isNavOpen ? 'nav-open' : ''} ${isReservationActive ? 'disabled' : ''}`}>
                                 <Link href="/home" onClick={handleClick("home")}>
                                     Home
                                 </Link>
@@ -105,17 +114,20 @@ const Header = ({ cartCount, toggleCart }) => {
                             </div>
                         </HStack>
                     </nav>
+                    <nav>
+
+                        <div className="icon-container hamburger" onClick={toggleNav}>
+                            {isNavOpen ? <FaTimes className="icon" /> : <FaBars className="icon" />}
+                        </div>
+                    </nav>
                     <Box>
-                        {/* ... (unchanged code) */}
-                        <Box>
-                            <FontAwesomeIcon
-                                icon={faShoppingBag}
-                                size="3x"
-                                onClick={toggleCart}
-                                style={{ cursor: "pointer", color: "#495e57" }}
-                            />
-                            <span className="cart-count">{cartCount}</span>
-                        </Box>
+                        <FontAwesomeIcon
+                            icon={faShoppingBag}
+                            size="3x"
+                            onClick={toggleCart}
+                            style={{ cursor: "pointer", color: "#495e57" }}
+                        />
+                        <span className="cart-count">{cartCount}</span>
                     </Box>
                 </HStack>
             </Box>

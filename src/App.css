@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
-/* Main Content Styles */
-.main-content {
-  padding: 20px;
+body {
+  background-color: #ffffff;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 section {
@@ -18,10 +22,15 @@ section {
   color: red;
 }
 
+li {
+  list-style-type: none;
+}
+
 
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
-  .main-content {
-    padding: 10px;
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 14px;
   }
+
 }

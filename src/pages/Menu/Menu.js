@@ -136,7 +136,7 @@ function Menu() {
             />
             <section className="products container" id="menu-section">
                 <div className="section-title">
-                    <h2 id="menu">Explore Our Menu</h2>
+                    <h2 id="menu section-title">Explore Our Menu</h2>
                 </div>
                 <div className="products-center">
                     {products.map((product) => (
